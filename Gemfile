@@ -33,6 +33,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Inclua nas versões quando rails >= 5.1 
+gem 'jquery-rails'
+ 
+# Sempre inclua
+gem 'materialize-sass'
+gem 'material_icons'
+gem 'devise'
+gem 'pundit'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
