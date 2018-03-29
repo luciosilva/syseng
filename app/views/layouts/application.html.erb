@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title>Sys Eng</title>
+    <title>SysEng</title>
+    <meta charset="utf-8">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
-    <%= yield %>
+	  <nav class="teal darken-3" role="navigation">
+		<div class="nav-wrapper container">
+		  <%= link_to "SysEng", root_path,:id => "logo-container" ,:class => "brand-logo" %>
+		  <ul class="right hide-on-med-and-down">
+		    <li><a href="#" class="waves-effect waves-light btn">Blog</a></li>
+		    <li><%= link_to "Entrar", new_user_session_path, :class => "btn btn-inverse" %></li>
+		    <li><%= link_to "Cadastrar-se", new_user_registration_path, :class => "btn btn-inverse" %></li>
+		  </ul>
+		 
+		  <ul id="nav-mobile" class="side-nav">      
+		    <li><a href="#" class="waves-effect waves-light btn">Blog</a></li>
+		    <li><%= link_to "Entrar", new_user_session_path, :class => "btn btn-inverse" %></li>
+		    <li><%= link_to "Cadastrar-se", new_user_registration_path, :class => "btn btn-inverse" %></li>
+		  </ul>
+		  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+		</div>
+	  </nav>
+	  
+
+  	      <p class="notice"><%= notice %></p>
+	      <p class="alert"><%= alert %></p>
+	      <%= yield %>
+
   </body>
 </html>
